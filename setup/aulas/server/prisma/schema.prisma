@@ -9,3 +9,13 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+//Suporta vários tipos de db Mongo, Cockroach, SQL... por isso utilizaremos 'model'
+
+model Habit {
+  id         String   @id @default(uuid())  //universally unique identifier
+  title      String
+  created_at DateTime
+
+  @@map("habits")
+}

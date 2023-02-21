@@ -24,7 +24,7 @@ export default function App() {
     
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>FERNANDA COSTA</Text>
+      <Text style={styles.text}>HABITS</Text>
       <StatusBar barStyle="light-content" backgroundColor="transparent" translucent/>
     </View>
   );

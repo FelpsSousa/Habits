@@ -2,13 +2,13 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-const firstHabitId = 'id_01'
+const firstHabitId = 'id_001'
 const firstHabitCreationDate = new Date('2022-12-31T03:00:00.000')
 
-const secondHabitId = 'id_02'
+const secondHabitId = 'id_002'
 const secondHabitCreationDate = new Date('2023-01-03T03:00:00.000')
 
-const thirdHabitId = 'id_03'
+const thirdHabitId = 'id_003'
 const thirdHabitCreationDate = new Date('2023-01-08T03:00:00.000')
 
 async function run() {

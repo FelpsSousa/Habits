@@ -14,12 +14,20 @@ export async function appRoutes(app: FastifyInstance) {
 
         const { title, weekDays } = createHabitBody.parse(request.body)
 
+        const today = dayjs().startOf('day').toDate()
+
         await prisma.habit.create({
             data: {
                 title,
                 created_at: new Date(),
+                weekDays: {
+                    create: weekDays.map(weekDay => {
+                        return {
+                            week_day: weekDay,
+                        }
+                    })
+                }
             }
         })
-
     })
 }
